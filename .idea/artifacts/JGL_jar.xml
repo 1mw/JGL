@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JGL:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/JGL_jar</output-path>
+    <root id="archive" name="JGL.jar">
+      <element id="module-output" name="JGL" />
+    </root>
+  </artifact>
+</component>
