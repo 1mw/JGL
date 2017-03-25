@@ -80,20 +80,20 @@ public abstract class JGLGame extends JPanel implements ActionListener {
 		return keysDown[keyCode];
 	}
 	
-	public abstract void keyReleased(KeyEvent e);
-	public abstract void keyPressed(KeyEvent e);
+	public void keyReleased(KeyEvent e) {}
+	public void keyPressed(KeyEvent e) {}
 	
 	private class TAdapter extends KeyAdapter {
 		@Override
 		public void keyReleased(KeyEvent e) {
 			keysDown[e.getKeyCode()] = false;
-			keyReleased(e);
+			JGLGame.this.keyReleased(e);
 		}
 		
 		@Override
 		public void keyPressed(KeyEvent e) {
 			keysDown[e.getKeyCode()] = true;
-			keyPressed(e);
+			JGLGame.this.keyPressed(e);
 		}
 	}
 }
